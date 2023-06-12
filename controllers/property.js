@@ -24,11 +24,11 @@ const createProperty = async (req, res) => {
       userId
     });
 
-    await User.findByIdAndUpdate(
-      userId,
-      { $push: { properties: newProperty._id } },
-      { new: true }
-    );
+    // await User.findByIdAndUpdate(
+    //   userId,
+    //   { $push: { properties: newProperty._id } },
+    //   { new: true }
+    // );
 
     res.status(201).json({ message: 'Property created successfully', newProperty });
   } catch (err) {
@@ -37,4 +37,14 @@ const createProperty = async (req, res) => {
   }
 };
 
-module.exports = {createProperty}
+const getAllProperties = async (req, res) => {
+  try {
+    const property = (await Property.find()).reverse();
+    res.status(200).json(property);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+
+module.exports = {createProperty, getAllProperties}

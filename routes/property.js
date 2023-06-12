@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {createProperty} = require('../controllers/property');
+const {createProperty, getAllProperties} = require('../controllers/property');
 
 
 
@@ -8,7 +8,10 @@ const {createProperty} = require('../controllers/property');
  */
 router.post('/', createProperty);
 
+/**
+ * all properties
+ */
 
-
+router.get('/', getAllProperties);
 
 module.exports = router
