@@ -4,68 +4,68 @@ const mongoose = require('mongoose');
 const propertySchema = new mongoose.Schema({
   title:{
     type: String,
-    required: true
+    // required: true
   },
   price:{
     type: String,
-    required: true
+    // required: true
   },
   text:{
     type: String,
-    required: true
+    // required: true
   },
   location:{
     type: String,
-    required: true
+    // required: true
   },
   subLocation:{
    type: String,
-   required: true
+  //  required: true
   },
   type:{
     type:String,
-    required: true
+    // required: true
   },
   status:{
     type: String,
-    required: true
+    // required: true
   },
   bedroom: {
-    type: Number,
-    required: true
+    type: String,
+    // required: true
   },
   bathroom:{
-    type: Number,
-    required: true
+    type: String,
+    // required: true
   },
   garage:{
-    type: Number,
-    required: true
+    type: String,
+    // required: true
   },
   area:{
-    type: Number,
-    required: true
+    type: String,
+    // required: true
   },
   kitchen:{
-    type: Number,
-    required: true
+    type: String,
+    // required: true
   },
   livingRoom: {
-    type: Number,
-    required: true
+    type: String,
+    // required: true
   },
   video:{
     type: String,
-    required: true
+    // required: true
   },
   image:{
     type: String,
-    required: true
+    // required: true
   },
 
   userId:{
     type: String,
-    required: true
+    // required: true
   }
 });
 

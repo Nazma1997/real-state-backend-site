@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {createUser, loginUser} = require('../controllers/users');
+const {createUser, loginUser, getAllUsers} = require('../controllers/users');
 
 /**
  * create and register
@@ -12,6 +12,11 @@ router.post('/', createUser);
  * Login
  */
 router.post('/login', loginUser);
+
+/**
+ * all users
+ */
+router.get('/', getAllUsers);
 
 
 
