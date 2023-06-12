@@ -40,8 +40,6 @@ const loginUser = async (req, res) => {
     }
 
     const token = jwt.sign({ userId: user._id }, 'your');
-
-
     res.status(200).json({ message: 'Login successful', token });
   } catch (err) {
     console.error(err);
