@@ -20,7 +20,7 @@ const propertySchema = new mongoose.Schema({
   },
   subLocation:{
    type: String,
-   required: true
+  //  required: true
   },
   type:{
     type:String,
@@ -56,7 +56,7 @@ const propertySchema = new mongoose.Schema({
   },
   video:{
     type: String,
-    required: true
+    // required: true
   },
   image:{
     type: String,
